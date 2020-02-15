@@ -1,0 +1,45 @@
+{
+  "name": "paypel",
+  "version": "1.0.0",
+  "description": "Paypel is a light-weight core banking application that powers banking operations like account creation, customer deposits, and withdrawals",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node server/index",
+    "test": "mocha  --reporter spec --require @babel/register server/**/*.test.js",
+    "coverage": "nyc --reporter=html --report=text npm run test",
+    "cover": "nyc mocha  --reporter spec --require @babel/register server/**/*.test.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devel605/Paypel.git"
+  },
+  "author": "Deve Loper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devel605/Paypel/issues"
+  },
+  "homepage": "https://github.com/devel605/Paypel#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "mocha": "^7.0.1",
+    "nodemon": "^2.0.2",
+    "nyc": "^15.0.0"
+  }
+}
